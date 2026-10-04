@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="theme-color" content="#f3f1ec" />
+<title>ZETTA GAMMA — След дня</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#top">ZETTA<span>GAMMA</span></a>
+    <nav class="nav">
+      <a href="#activation">След дня</a>
+      <a href="#product">О продукте</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="container hero">
+    <div class="hero-copy fade">
+      <div class="eyebrow">Digital activation / ZETTA GAMMA</div>
+      <h1>День оставляет след.</h1>
+      <p>Тело помнит долгие часы за экраном, дорогу, встречи и движение. Пусть ночью ему не приходится продолжать этот день.</p>
+      <a href="#activation" class="btn">Показать мой след дня <span>→</span></a>
+    </div>
+    <div class="hero-art fade">
+      <div class="ambient"></div>
+      <div class="mattress-wrap">
+        <div class="mattress">
+          <svg id="heroTopo" viewBox="0 0 800 500" preserveAspectRatio="none" aria-hidden="true"></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="activation">
+    <div class="container">
+      <div class="section-head fade">
+        <div>
+          <div class="eyebrow">01 / Соберите свой день</div>
+          <h2>Как прошёл ваш день?</h2>
+        </div>
+        <p>Несколько движений — и день превращается в персональную топографию. Это художественная визуализация нагрузки, а не медицинская оценка.</p>
+      </div>
+
+      <div class="activation">
+        <div class="controls fade">
+          <h3>Ваш день</h3>
+          <p class="intro">Настройте параметры. Поверхность ZETTA GAMMA будет меняться в реальном времени.</p>
+
+          <div class="control">
+            <div class="label-row"><strong>За экраном</strong><span class="value" id="screenVal">8 ч</span></div>
+            <input id="screen" type="range" min="0" max="12" value="8" />
+          </div>
+
+          <div class="control">
+            <div class="label-row"><strong>В дороге</strong><span class="value" id="travelVal">64 мин</span></div>
+            <input id="travel" type="range" min="0" max="180" value="64" />
+          </div>
+
+          <div class="control">
+            <div class="label-row"><strong>На встречах</strong><span class="value" id="meetVal">5</span></div>
+            <input id="meet" type="range" min="0" max="8" value="5" />
+          </div>
+
+          <div class="control">
+            <div class="label-row"><strong>На ногах</strong><span class="value" id="feetVal">3 ч</span></div>
+            <input id="feet" type="range" min="0" max="10" value="3" />
+          </div>
+
+          <div class="control">
+            <div class="label-row"><strong>Тренировка</strong><span class="value" id="workoutVal">Лёгкая</span></div>
+            <div class="chips" id="workoutChips">
+              <button class="chip" data-v="0">Нет</button>
+              <button class="chip active" data-v="1">Лёгкая</button>
+              <button class="chip" data-v="2">Интенсивная</button>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button id="finishBtn" class="btn">Закончить день <span>→</span></button>
+            <button id="resetBtn" class="btn ghost">Сбросить</button>
+          </div>
+        </div>
+
+        <div class="visual-panel fade" id="visualPanel">
+          <div class="visual-meta">
+            <span class="stat" id="stat1">8 ч за экраном</span>
+            <span class="stat" id="stat2">64 мин в дороге</span>
+            <span class="stat" id="stat3">5 встреч</span>
+          </div>
+          <div class="live-mattress">
+            <svg id="liveTopo" viewBox="0 0 900 600" preserveAspectRatio="none" aria-label="Художественная топография дня"></svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="result" id="result">
+        <div class="result-panel">
+          <div class="result-grid">
+            <div>
+              <div class="eyebrow">02 / День завершён</div>
+              <h3>Ночь возвращает равновесие.</h3>
+              <p>ZETTA GAMMA создан, чтобы тело получало необходимую поддержку во сне.</p>
+              <div class="actions">
+                <button id="downloadBtn" class="btn">Сохранить карточку</button>
+                <button id="shareBtn" class="btn secondary">Поделиться</button>
+                <button id="againBtn" class="btn ghost">Пройти ещё раз</button>
+              </div>
+              <p class="disclaimer">Визуализация носит художественный характер и не является медицинской диагностикой.</p>
+            </div>
+
+            <div class="share-card" id="shareCard">
+              <div class="card-brand">ZETTA GAMMA</div>
+              <div class="card-title">Мой след дня</div>
+              <div class="card-stats" id="cardStats">8 ч за экраном / 64 мин в дороге / 5 встреч</div>
+              <div class="card-art">
+                <svg id="cardTopo" viewBox="0 0 800 260" preserveAspectRatio="none"></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="product">
+    <div class="container">
+      <div class="product fade">
+        <div>
+          <div class="eyebrow">ZETTA GAMMA</div>
+          <h3>Поддержка, которой не видно.</h3>
+          <p>Матрасы ZETTA GAMMA тестируются в Zetta Labs и реальными людьми, чтобы обеспечивать телу необходимую поддержку.</p>
+          <a href="#top" class="btn secondary">Узнать о ZETTA GAMMA</a>
+        </div>
+        <div class="product-object" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">Concept site for ZETTA GAMMA · Campaign «След дня»</div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
